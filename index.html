@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Polaris" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Polaris</title>
+</head>
+<body>
+
+  <!-- BACKGROUND -->
+  <div id="bg-layer"></div>
+  <div id="orb-container">
+    <div class="orb" id="orb1"></div>
+    <div class="orb" id="orb2"></div>
+    <div class="orb" id="orb3"></div>
+  </div>
+  <div id="noise-overlay"></div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- APP -->
+  <div id="app">
+
+    <!-- ════ SCREEN: HOME ════ -->
+    <div id="screen-home" class="screen active">
+
+      <header class="home-header">
+        <div class="logo-wrap">
+          <div class="logo-icon" id="logo-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Outer star -->
+              <polygon
+                points="20,2 23.5,14 36,14 26,21.5 29.5,34 20,27 10.5,34 14,21.5 4,14 16.5,14"
+                fill="white" opacity="0.12"/>
+              <!-- Inner star -->
+              <polygon
+                points="20,6 22.5,14.5 31,14.5 24.5,19.5 27,28 20,23 13,28 15.5,19.5 9,14.5 17.5,14.5"
+                fill="white" opacity="0.5"/>
+              <!-- Core -->
+              <circle cx="20" cy="20" r="3" fill="white"/>
+              <!-- Rays -->
+              <line x1="20" y1="0" x2="20" y2="8" stroke="white" stroke-width="1.2" opacity="0.35"/>
+              <line x1="20" y1="32" x2="20" y2="40" stroke="white" stroke-width="1.2" opacity="0.35"/>
+              <line x1="0" y1="20" x2="8" y2="20" stroke="white" stroke-width="1.2" opacity="0.35"/>
+              <line x1="32" y1="20" x2="40" y2="20" stroke="white" stroke-width="1.2" opacity="0.35"/>
+            </svg>
+          </div>
+          <div class="logo-text-wrap">
+            <span class="logo-name">POLARIS</span>
+            <span class="logo-tagline">How are you feeling?</span>
+          </div>
+        </div>
+        <div class="header-pill">
+          <span class="pulse-dot"></span>
+          <span>Now Playing</span>
+        </div>
+      </header>
+
+      <!-- Emotions Grid -->
+      <main id="emotions-grid" class="emotions-grid"></main>
+
+    </div>
+
+    <!-- ════ SCREEN: EMOTION ════ -->
+    <div id="screen-emotion" class="screen">
+
+      <div class="top-bar">
+        <button class="back-btn" id="back-from-emotion">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <polyline points="15,18 9,12 15,6"/>
+          </svg>
+        </button>
+        <span class="top-bar-title" id="emotion-top-title"></span>
+        <div style="width:40px"></div>
+      </div>
+
+      <div class="emotion-hero" id="emotion-hero">
+        <div class="emotion-emoji-big" id="emotion-emoji-big"></div>
+        <h1 class="emotion-name" id="emotion-name"></h1>
+        <p class="emotion-desc" id="emotion-desc"></p>
+        <div class="emotion-stats" id="emotion-stats"></div>
+      </div>
+
+      <div class="section-label">Genres</div>
+      <div class="genre-scroll" id="genre-tabs"></div>
+
+      <div class="section-label" style="margin-top:20px">Songs</div>
+      <div id="songs-list" class="songs-list"></div>
+
+      <button class="shuffle-btn" id="shuffle-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16,3 21,3 21,8"/>
+          <line x1="4" y1="20" x2="21" y2="3"/>
+          <polyline points="21,16 21,21 16,21"/>
+          <line x1="4" y1="4" x2="9" y2="9"/>
+        </svg>
+        Shuffle Play
+      </button>
+
+    </div>
+
+    <!-- ════ SCREEN: SONG ════ -->
+    <div id="screen-song" class="screen">
+
+      <div class="top-bar">
+        <button class="back-btn" id="back-from-song">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <polyline points="15,18 9,12 15,6"/>
+          </svg>
+        </button>
+        <span class="top-bar-title">Song Story</span>
+        <div style="width:40px"></div>
+      </div>
+
+      <div class="song-detail-wrap">
+
+        <!-- Cover -->
+        <div class="cover-stage" id="cover-stage">
+          <div class="cover-shadow" id="cover-shadow"></div>
+          <div class="cover-frame">
+            <img id="song-cover-img" src="" alt="cover" />
+            <div class="cover-shine"></div>
+          </div>
+          <div class="vinyl-disc" id="vinyl-disc">
+            <div class="vinyl-label"></div>
+          </div>
+        </div>
+
+        <!-- Meta -->
+        <div class="song-meta-wrap">
+          <span class="genre-badge" id="genre-badge"></span>
+          <h2 class="song-title-display" id="song-title-display"></h2>
+          <p class="song-artist-display" id="song-artist-display"></p>
+        </div>
+
+        <!-- Story Card -->
+        <div class="story-card">
+          <div class="story-header">
+            <span class="story-icon">📖</span>
+            <span class="story-label">The Story</span>
+            <div class="lang-toggle">
+              <button class="lang-btn active" data-lang="en">EN</button>
+              <button class="lang-btn" data-lang="ar">عر</button>
+            </div>
+          </div>
+          <p class="story-body" id="story-en"></p>
+          <p class="story-body rtl hidden" id="story-ar"></p>
+        </div>
+
+        <!-- Spotify Button -->
+        <a class="spotify-link" id="spotify-link" href="#" target="_blank" rel="noopener">
+          <div class="spotify-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="12" fill="#1DB954"/>
+              <path d="M17.9 10.9C14.7 9 9.35 8.8 6.3 9.75c-.5.15-1-.15-1.15-.6-.15-.5.15-1 .6-1.15 3.55-1.05 9.4-.85 13.1 1.35.45.25.6.85.35 1.3-.25.35-.85.5-1.3.25zm-.1 2.8c-.25.4-.75.5-1.15.25-2.7-1.65-6.8-2.15-9.95-1.15-.4.1-.85-.1-.95-.5-.1-.4.1-.85.5-.95 3.65-1.1 8.15-.55 11.25 1.35.4.25.5.75.3 1zm-1.3 2.8c-.2.35-.65.45-1 .25-2.35-1.45-5.3-1.75-8.8-.95-.35.1-.65-.15-.75-.45-.1-.35.15-.65.45-.75 3.8-.85 7.1-.5 9.7 1.1.35.15.45.65.4 1.05-.05-.05-.05-.1 0-.25z" fill="white"/>
+            </svg>
+          </div>
+          <span>Open in Spotify</span>
+          <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7"/>
+            <polyline points="7,7 17,7 17,17"/>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="songs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
