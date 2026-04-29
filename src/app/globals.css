@@ -1,0 +1,387 @@
+@import "tailwindcss";
+
+/* ============================================================
+   POLARIS — Global Design System
+   ============================================================ */
+
+/* Font System */
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "Segoe UI", sans-serif;
+  background: #000000;
+  color: #f5f5f7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   POLARIS STAR SVG ANIMATIONS
+   ============================================================ */
+
+@keyframes star-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes star-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.92); }
+}
+
+@keyframes star-spin-shuffle {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* ============================================================
+   AMBIENT ENVIRONMENT ANIMATIONS
+   ============================================================ */
+
+/* Love — warm floating particles */
+@keyframes float-particle {
+  0% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.6; }
+  33% { transform: translateY(-20px) translateX(10px) scale(1.1); opacity: 1; }
+  66% { transform: translateY(-10px) translateX(-8px) scale(0.9); opacity: 0.8; }
+  100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.6; }
+}
+
+/* Rain drops */
+@keyframes rain-drop {
+  0% { transform: translateY(-100px) scaleY(0.5); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(100vh) scaleY(1.5); opacity: 0; }
+}
+
+/* Anger pulse */
+@keyframes anger-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+/* Breathe (calm) */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.15); opacity: 0.8; }
+}
+
+/* Energy surge (motivation) */
+@keyframes energy-surge {
+  0% { transform: scaleX(0) translateY(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: scaleX(1) translateY(-10px); opacity: 0; }
+}
+
+/* Crown glow (confidence) */
+@keyframes crown-glow {
+  0%, 100% { filter: brightness(1) drop-shadow(0 0 8px currentColor); }
+  50% { filter: brightness(1.4) drop-shadow(0 0 20px currentColor); }
+}
+
+/* Void pulse (loneliness) */
+@keyframes void-pulse {
+  0%, 100% { transform: scale(0.95); opacity: 0.4; }
+  50% { transform: scale(1.08); opacity: 0.15; }
+}
+
+/* Sepia drift (nostalgia) */
+@keyframes sepia-drift {
+  0%, 100% { transform: translateX(0) rotate(-1deg); opacity: 0.3; }
+  50% { transform: translateX(8px) rotate(1deg); opacity: 0.6; }
+}
+
+/* Shatter (heartbreak) */
+@keyframes shatter {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+  25% { transform: scale(1.02) rotate(0.5deg); opacity: 0.7; }
+  75% { transform: scale(0.98) rotate(-0.5deg); opacity: 0.4; }
+}
+
+/* Global ambient glow */
+@keyframes ambient-glow-shift {
+  0%, 100% { opacity: 0.25; transform: scale(1) translate(0, 0); }
+  25% { opacity: 0.35; transform: scale(1.05) translate(2%, 1%); }
+  50% { opacity: 0.3; transform: scale(1.02) translate(-1%, 2%); }
+  75% { opacity: 0.4; transform: scale(1.08) translate(1%, -1%); }
+}
+
+/* Card entrance */
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(30px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Fade up */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+/* Loading pulse */
+@keyframes loading-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* ============================================================
+   GLASS MORPHISM SYSTEM
+   ============================================================ */
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-medium {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(40px) saturate(220%);
+  -webkit-backdrop-filter: blur(40px) saturate(220%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================================
+   POLARIS UTILITY CLASSES
+   ============================================================ */
+
+.polaris-star {
+  animation: star-pulse 3s ease-in-out infinite;
+}
+
+.polaris-star-spin {
+  animation: star-spin-shuffle 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.ambient-glow {
+  animation: ambient-glow-shift 6s ease-in-out infinite;
+}
+
+.card-animate-in {
+  animation: card-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ============================================================
+   SONG CARD INTERACTIONS
+   ============================================================ */
+
+.song-card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.song-card:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.song-card:active {
+  transform: scale(0.98);
+}
+
+/* Album cover parallax */
+.album-cover {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.3s ease;
+}
+
+.song-card:hover .album-cover {
+  transform: scale(1.05) translateY(-2px);
+}
+
+/* ============================================================
+   SCROLLBAR STYLING
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================================
+   SELECTION STYLING
+   ============================================================ */
+
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* ============================================================
+   RESPONSIVE HELPERS
+   ============================================================ */
+
+.container-polaris {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 768px) {
+  .container-polaris {
+    padding: 0 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-polaris {
+    padding: 0 80px;
+  }
+}
+
+/* ============================================================
+   CURSOR GLOW (desktop only)
+   ============================================================ */
+
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+  mix-blend-mode: screen;
+}
+
+/* ============================================================
+   STORY PANEL
+   ============================================================ */
+
+.story-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.4s ease,
+    padding 0.4s ease;
+  opacity: 0;
+}
+
+.story-panel.open {
+  max-height: 600px;
+  opacity: 1;
+}
+
+/* ============================================================
+   NAV SECTION TABS
+   ============================================================ */
+
+.nav-tab {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-tab.active::after,
+.nav-tab:hover::after {
+  transform: scaleX(1);
+}
+
+/* ============================================================
+   EMOTION CARD HOVER EFFECTS
+   ============================================================ */
+
+.emotion-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, var(--accent-color, rgba(255,255,255,0.1)) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.emotion-card:hover::before {
+  opacity: 1;
+}
+
+.emotion-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Particle animation items */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-particle var(--duration, 4s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.rain-line {
+  position: absolute;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(120, 180, 255, 0.6), transparent);
+  animation: rain-drop var(--duration, 1.5s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
