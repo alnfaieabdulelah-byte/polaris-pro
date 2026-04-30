@@ -81,7 +81,7 @@ export const emotions: EmotionCategory[] = [
         title: "All of Me",
         artist: "John Legend",
         album: "Love in the Future",
-        albumCover: "https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f0",
+        albumCover: "https://t2.genius.com/unsafe/430x430/https%3A%2F%2Fimages.genius.com%2F14a8c78b6bc1c461b564ba082bc1a158.1000x1000x1.png",
         spotifyUrl: "https://open.spotify.com/track/3U4isOIWM3VvDubwSI3y7a",
         emotionTag: "Love",
         accentColor: "#8B6914",
@@ -96,8 +96,8 @@ export const emotions: EmotionCategory[] = [
         title: "Can't Help Falling in Love",
         artist: "Elvis Presley",
         album: "Blue Hawaii",
-        albumCover: "https://i.scdn.co/image/ab67616d0000b273ef9b110e43fda649f5b70e44",
-        spotifyUrl: "https://open.spotify.com/track/44AyOl4qoeZw2jSHpXN5YY",
+        albumCover: "https://t2.genius.com/unsafe/430x430/https%3A%2F%2Fimages.genius.com%2Ff4f1c1433d4913299acc7e0036c17dfe.600x593x1.jpg",
+        spotifyUrl: "https://open.spotify.com/track/44AyOl4qVkzS48vBsbNXaC?si=17ded991bfb04521",
         emotionTag: "Love",
         accentColor: "#2D5A8E",
         previewUrl: "",
@@ -105,10 +105,191 @@ export const emotions: EmotionCategory[] = [
           en: "Originally recorded by Elvis Presley in 1961 for the film Blue Hawaii, 'Can't Help Falling in Love' is based on a French melody 'Plaisir d'amour' from 1784. The song captures the feeling of surrendering entirely to love — the idea that falling in love is as natural and inevitable as rivers flowing to the sea. It has been covered hundreds of times and remains one of the most recognizable love songs in human history.",
           ar: "سجّلها أصلاً إلفيس بريسلي عام 1961 لفيلم 'بلو هاواي'، وتعتمد الأغنية على لحن فرنسي من عام 1784. تجسّد الأغنية الشعور بالاستسلام الكامل للحب — الفكرة القائلة بأن الوقوع في الحب أمر طبيعي ولا مفر منه كتدفق الأنهار نحو البحر."
         }
+      },
+            {
+        id: "love-4",
+        title: "Something",
+        artist: "The Beatles",
+        album: "Abbey Road",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b273dc30583ba717007b00c3b27c",
+        spotifyUrl: "https://open.spotify.com/track/6VrLYYQK9oxFiY960Xun3I",
+        emotionTag: "Love",
+        accentColor: "#5D5D5D",
+        previewUrl: "",
+        story: {
+          en: "Written by George Harrison for his wife Pattie Boyd. Frank Sinatra famously called it 'the greatest love song of the last 50 years.' The lyrics capture the inexplicable magnetic draw towards a partner, where the narrator is captivated not just by her beauty, but by her very 'style' and soul. It represents the certainty of love without needing a logical reason.",
+          ar: "تُعد هذه الأغنية من أرق ما كُتب في تاريخ الموسيقى. صاغها جورج هاريسون لزوجته 'باتي بويد'، ليعبر فيها عن ذلك الانجذاب الغامض الذي لا يمكن تفسيره بالكلمات. هي رحلة في تفاصيل المحبوب الصغيرة التي تجعل التخلي عنه أمراً مستحيلاً. تجسد الأغنية حالة 'اليقين' في الحب، حيث لا يحتاج المحب لأسباب منطقية، بل يكفيه وجود الطرف الآخر ليرى العالم مكتملاً."
+        }
+      },
+      {
+        id: "love-5",
+        title: "Lovesong",
+        artist: "The Cure",
+        album: "Disintegration",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b273100693a73199b009e530638e",
+        spotifyUrl: "https://open.spotify.com/track/299df97uS72m2969Gf97p3",
+        emotionTag: "Love",
+        accentColor: "#1A1A1A",
+        previewUrl: "",
+        story: {
+          en: "Robert Smith wrote 'Lovesong' as a wedding present for his wife, Mary Poole. He wanted to provide her with a constant reassurance that no matter how long he was away on tour, his feelings for her would never change. Its simplicity and haunting melody reflect a deep, unshakeable loyalty that transcends distance and time.",
+          ar: "كُتبت هذه الأغنية كهدية زفاف من 'روبرت سميث' لزوجته 'ماري بول'. كانت رسالة طمأنة صريحة، كتبها ليخبرها أنه مهما ابتعد في جولاته الغنائية حول العالم، سيبقى قلبه ثابتاً في مكانه. تتميز الأغنية بصدقها الشديد وخلوها من التعقيد، فهي تعبر عن الحب كملجأ آمن، وكوعد بالوفاء الدائم والعودة المستمرة مهما طالت المسافات."
+        }
+      },
+      {
+        id: "love-6",
+        title: "God Only Knows",
+        artist: "The Beach Boys",
+        album: "Pet Sounds",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b27394578b8772a6a5758252c42b",
+        spotifyUrl: "https://open.spotify.com/track/17S4E7Y99m0vzbjsIorn4B",
+        emotionTag: "Love",
+        accentColor: "#F39C12",
+        previewUrl: "",
+        story: {
+          en: "Produced by Brian Wilson, this song was revolutionary for its time, being one of the first pop songs to use 'God' in the title. It explores the existential realization of how essential a partner is. The lyrics suggest that while the narrator might not be perfect, their life would lose its very foundation and meaning without the other person.",
+          ar: "هي ليست مجرد أغنية، بل هي ترنيمة وجودية. تتحدث عن الخوف من فقدان الشريك، وكيف يمكن للحياة أن تفقد جوهرها في غيابه. كانت سابقة لعصرها في طرح فكرة الاحتياج الروحي للآخر. تعبر الكلمات عن استسلام المحب للحقيقة الوحيدة التي يعرفها: أن حياته قبل هذا الحب لم تكن سوى انتظار، وأن الرب وحده يعلم ما قد يؤول إليه حاله لو رحل المحبوب."
+        }
+      },
+      {
+        id: "love-7",
+        title: "Your Song",
+        artist: "Elton John",
+        album: "Elton John",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b273710899478f40777598687399",
+        spotifyUrl: "https://open.spotify.com/track/3S0OXQeG6B39vDadT9I71O",
+        emotionTag: "Love",
+        accentColor: "#A67C00",
+        previewUrl: "",
+        story: {
+          en: "Bernie Taupin wrote the lyrics at a kitchen table while Elton John composed the music in just 20 minutes. It captures the raw innocence of a young man who has no riches to offer, only his words. The song’s beauty lies in its humility—the simple declaration that 'how wonderful life is while you're in the world.'",
+          ar: "تجسد هذه الأغنية بساطة البدايات وعنفوان المشاعر الفطرية. تحكي قصة شاب لا يملك جاهاً ولا مالاً ليقدمه لحبيبته، فيقرر أن يهديها 'أغنية'. هي رسالة حب متواضعة، تعترف بقلة الحيلة أمام عظمة المحبوب، وتؤكد أن أجمل الأشياء في الحياة هي تلك التي نعيشها معاً. الأغنية هي احتفاء بوجود الطرف الآخر الذي يجعل العالم مكاناً أفضل لمجرد كونه فيه."
+        }
+      },
+      {
+        id: "love-8",
+        title: "At Last",
+        artist: "Etta James",
+        album: "At Last!",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b273934360e25287515082155c82",
+        spotifyUrl: "https://open.spotify.com/track/4HhvTjoLwxov9YI9I9IRuD",
+        emotionTag: "Love",
+        accentColor: "#6A5ACD",
+        previewUrl: "",
+        story: {
+          en: "Etta James’ 1960 version became the definitive anthem for finding true love after a long period of loneliness. The song describes the feeling of a 'lonely road' finally coming to an end. It represents the moment of emotional salvation when the skies clear up and the dream of being loved becomes a living reality.",
+          ar: "هي أغنية 'الخلاص' العاطفي. تعبر عن تلك اللحظة التي تنتهي فيها سنوات الانتظار والوحدة بلقاء الشخص المنشود. بصوت إيتا جيمس، تحولت الأغنية إلى صرخة فرح هادئة، تصف السماء وهي تصفو، والليل الذي ينقضي. إنها تجسد شعور الراحة الذي يغمر القلب حين يدرك المرء أخيراً أنه لم يعد وحيداً، وأن 'الحلم' قد تجسد أمامه في حقيقة ملموسة."
+        }
+      },
+      {
+        id: "love-9",
+        title: "Thinking Out Loud",
+        artist: "Ed Sheeran",
+        album: "x",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b27313b3e37318a0c247153844d4",
+        spotifyUrl: "https://open.spotify.com/track/34gCuhvS6zUVerPd7U6o6v",
+        emotionTag: "Love",
+        accentColor: "#1DB954",
+        previewUrl: "",
+        story: {
+          en: "Inspired by his grandparents' lifelong romance, Sheeran wrote this to explore the idea of enduring love that persists into old age. The lyrics focus on physical aging versus emotional consistency, promising to love the partner just as much at seventy as at twenty-three. It’s a modern vow of timeless fidelity.",
+          ar: "هي ميثاق غليظ على الوفاء الأبدي. كتبها إد شيران متأثراً بقصة حب أجداده التي دامت طويلاً. تتحدث الأغنية عن فكرة الحب الذي لا يتأثر بمرور الزمن أو تغير الملامح؛ الحب الذي يشيخ معك، ويبقى نابضاً حتى حين تخوننا الذاكرة أو تضعف الأجساد. هي وعد صريح بأن تظل المشاعر بنفس القوة والدهشة حتى بعد مرور عقود طويلة من العمر."
+        }
+      },
+      {
+        id: "love-10",
+        title: "Lover",
+        artist: "Taylor Swift",
+        album: "Lover",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b273e731cd108608e82110c43144",
+        spotifyUrl: "https://open.spotify.com/track/1dGr1s1s46oYI6vOUEPv6S",
+        emotionTag: "Love",
+        accentColor: "#FEB7D3",
+        previewUrl: "",
+        story: {
+          en: "Taylor Swift wrote 'Lover' as a tribute to the intimacy of a long-term relationship. She wanted to capture the feeling of establishing a life with someone where your 'home' is a person, not a place. The bridge of the song is written like a wedding vow, symbolizing a deep commitment and the desire to stay by someone's side forever.",
+          ar: "كتبت تيلور سويفت هذه الأغنية كتحية للحميمية في العلاقات المستقرة. أرادت أن تجسد شعور بناء حياة مع شخص ما، حيث يصبح 'الوطن' هو الشخص لا المكان. تصف الأغنية تفاصيل التعلق اليومي والرغبة في البقاء بجانب المحبوب للأبد، وكأنها عهد أبدي بالولاء، حيث يغدو المحبوب هو البوصلة والوجهة النهائية."
+        }
+      },
+      {
+        id: "love-11",
+        title: "Yellow",
+        artist: "Coldplay",
+        album: "Parachutes",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b273934360e25287515082155c82",
+        spotifyUrl: "https://open.spotify.com/track/3PfIrDoz19wz7qly79asmo",
+        emotionTag: "Love",
+        accentColor: "#FFD700",
+        previewUrl: "",
+        story: {
+          en: "Written during a starry night in Wales, Chris Martin was inspired by the brightness of the stars. The word 'Yellow' was chosen as a metaphor for the radiance and light a loved one brings into a world. It captures the feeling of total devotion, where the narrator is willing to bleed themselves dry just to show their love.",
+          ar: "تحكي الأغنية عن التفاني المطلق، حيث يرى المحب كل شيء في الكون مصبوغاً بلون المحبوب. استلهم كريس مارتن الكلمات من سماء مرصعة بالنجوم، واختار 'اللون الأصفر' ليرمز للضوء والبهجة التي يمنحها الشريك لحياته. هي تعبير عن الاستعداد للتضحية بكل شيء في سبيل إسعاد الآخر، وعن حالة الانبهار الدائم بجمال وجوده."
+        }
+      },
+      {
+        id: "love-12",
+        title: "First Day of My Life",
+        artist: "Bright Eyes",
+        album: "I'm Wide Awake, It's Morning",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b27361a6873528b12f68903c737f",
+        spotifyUrl: "https://open.spotify.com/track/58H36ghJ0qPRj6Z6qS0Yv6",
+        emotionTag: "Love",
+        accentColor: "#A52A2A",
+        previewUrl: "",
+        story: {
+          en: "This indie-folk masterpiece explores the realization that life didn't truly begin until meeting a specific person. It’s about the epiphany that love isn't just a feeling, but a new way of seeing the world. The lyrics reflect a profound change in perspective, where the past feels like a blur and the future only makes sense with the partner.",
+          ar: "تتحدث الأغنية عن 'الولادة الجديدة' التي يختبرها الإنسان عند وقوعه في الحب الحقيقي. الراوي هنا يعترف بأنه كان يظن نفسه حياً، لكنه لم يبدأ العيش فعلياً إلا في اليوم الذي التقى فيه بشريكه. هي رحلة في الوعي، حيث يدرك المرء أن كل ما فات كان مجرد تمهيد لهذه اللحظة. تعبر عن الحب كبصيرة تجعلنا نرى أنفسنا والعالم بشكل أوضح."
+        }
+      },
+      {
+        id: "love-13",
+        title: "I Will Always Love You",
+        artist: "Whitney Houston",
+        album: "The Bodyguard",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b273ed2459737f7142b5f00e5758",
+        spotifyUrl: "https://open.spotify.com/track/4eHXLInRzIunp7Jv2vY6vZ",
+        emotionTag: "Love",
+        accentColor: "#FF69B4",
+        previewUrl: "",
+        story: {
+          en: "Though originally a goodbye song by Dolly Parton, Whitney Houston's version became the ultimate anthem of selfless love. It represents the highest form of devotion—wishing for someone's happiness even if it means they won't be with you. It is a powerful declaration that love doesn't end just because a relationship does.",
+          ar: "رغم أنها تُغنى في الأفراح، إلا أنها في الأصل أغنية 'وداع بمرارة الحب'. نسخة ويتني هيوستن حولتها إلى ملحمة عاطفية، تُعبر عن أسمى درجات الحب؛ وهي أن تتمنى الخير للمحبوب حتى لو لم يكن بجانبك. هي تجسيد للتضحية والوفاء الذي لا ينتهي بانتهاء العلاقة، وتأكيد على أن المشاعر الصادقة تبقى حية وتتجاوز لحظات الفراق."
+        }
+      },
+      {
+        id: "love-14",
+        title: "Just the Way You Are",
+        artist: "Bruno Mars",
+        album: "Doo-Wops & Hooligans",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b273c1d4367396b279a029676778",
+        spotifyUrl: "https://open.spotify.com/track/7BqBn9tq7vdu69PS3RMZ6v",
+        emotionTag: "Love",
+        accentColor: "#FF4500",
+        previewUrl: "",
+        story: {
+          en: "This song focuses on the importance of affirmation in a relationship. Bruno Mars wrote it to tell a partner that they are enough exactly as they are. It addresses the common insecurities people feel about their appearance, offering a mirror that reflects only beauty and perfection through the eyes of a lover.",
+          ar: "تعد هذه الأغنية بمثابة جرعة من الثقة والحب الصافي. كتبها برونو مارس ليعبر عن انبهاره بجمال شريكته الطبيعي، مؤكداً لها أنها لا تحتاج لتغيير أي شيء في نفسها. هي رسالة حب موجهة لكل من يشعر بعدم الكفاية، لتخبره أن عين المحب لا ترى العيوب، بل ترى الجمال في كل التفاصيل التي قد يظنها الشخص الآخر نقصاً."
+        }
+      },
+      {
+        id: "love-15",
+        title: "A Thousand Years",
+        artist: "Christina Perri",
+        album: "The Twilight Saga: Breaking Dawn, Pt. 1",
+        albumCover: "https://i.scdn.co/image/ab67616d0000b2730693a73199b009e530638e",
+        spotifyUrl: "https://open.spotify.com/track/6lanR86HjUojC03zUoffv3",
+        emotionTag: "Love",
+        accentColor: "#B0C4DE",
+        previewUrl: "",
+        story: {
+          en: "Written for the 'Twilight' movie, the song became a global wedding staple. It explores the idea of a love that transcends time and fear. The lyrics describe the bravery required to love someone and the commitment to wait for them through 'a thousand years' and a thousand more.",
+          ar: "تعبر هذه الأغنية عن الصبر والانتظار في الحب. تتحدث عن تلك الشجاعة التي يحتاجها المرء ليفتح قلبه لشخص آخر، وعن الوعد بالبقاء والولاء عبر الزمن. هي تجسيد لفكرة الحب الخالد الذي لا يعترف بالعوائق الزمنية، حيث يرى المحب أن كل ثانية قضاها في انتظار شريكه لم تكن ضياعاً، بل كانت تمهيداً لحياة كاملة."
+        }
       }
     ]
-  },
-  {
+}
+  
+  ,{
     id: "sadness",
     label: "Sadness",
     labelAr: "حزن",
